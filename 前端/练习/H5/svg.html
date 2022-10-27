@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" manifest="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my first svg</title>
+    <script src="../jquery.js"></script>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+body>div{
+    border: 1px solid #000;
+    margin: 10px;
+
+}
+body>div:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+body>div div:nth-child(n){
+    float: left;
+}
+#lr{
+    border-top-left-radius: 5px;
+    overflow: hidden;
+    transform-origin:145px 65px;
+    transform: rotate(10deg);
+}
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+        <p>Microsoft</p>
+        <svg>
+            <rect width="50" height="50" x="50" y="10"
+            style="fill:red;"/>
+            <rect width="50" height="50" x="105" y="10"
+            style="fill: green;"/>
+            <rect width="50" height="50" x="50" y="65"
+            style="fill: blue;"/>
+            <rect width="50" height="50" x="105" y="65"
+            style="fill:yellow"/>
+        </svg>
+        </div>
+    </div>
+
+    <div>
+        <div>
+            <p>中国银行</p>
+            <svg>
+                <circle cx="150" cy="60" r="50" stroke-width="10"
+                style="stroke:red; fill: white;"/>
+                <rect width="40" height="40" x="130" y="40" rx="2"
+                style="fill: white; stroke: red; stroke-width: 10; "/>
+                <line x1="150" y1="10" x2="150" y2="40"
+                style="stroke:red;stroke-width:10"/>
+                <line x1="150" y1="80" x2="150" y2="110"
+                style="stroke:red;stroke-width: 10;">
+            </svg>
+        </div>
+        <div style="position: relative;">
+            <p>百事达</p>
+            <svg>
+                <circle cx="70" cy="70" r="50"
+                style="fill: red;"/>
+                <circle cx="140" cy="70" r="50"
+                style="fill:orange;opacity: 0.7;"/>
+            </svg>
+            <p style="position: absolute; color: white; left:28px;top: 76px;font-weight: bold;font-size: 26px;">MasterCard</p>
+        </div>
+    </div>
+
+    <div>
+        <p>椭圆</p>
+        <svg>
+            <ellipse cx="300" cy="100" rx="200" ry="30"
+            style="fill: purple;"/>
+            <ellipse cx="300" cy="70" rx="200" ry="30"
+            style="fill: green;"/>
+            <ellipse cx="300" cy="40" rx="200" ry="30"
+            style="fill: yellow;"/>
+        </svg>
+          
+        <svg>
+            <ellipse cx="300" cy="70" rx="200" ry="30"
+            style="fill: yellow;"/>
+            <ellipse cx="300" cy="70" rx="170" ry="20"
+            style="fill: white;"/>
+        </svg>
+    </div>
+
+    <div style="background-color: white;">
+        <p>香港太古集团</p>
+        <svg>
+            <polygon points="70,10,150,70,70,130"
+            style="fill: red;"/>
+            <polygon points="230,10,150,70,230,130"
+            style="fill: red;"/>
+            <line x1="150" y1="10" x2="150" y2="130"
+            style="stroke:  rgb(9, 9, 79);stroke-width: 10;"/>
+            <rect width="160" height="120" x="70" y="10"
+            style="stroke: rgb(9, 9, 79);stroke-width: 3;fill: none;"/>
+        </svg>
+    </div>
+
+</body>
+</html>

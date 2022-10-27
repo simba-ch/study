@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>文献</title>
+    <style>
+        #btns {
+            width: 600px;
+        }
+
+        #btns button {
+            margin-right: 20px;
+            width: 100px;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='btns'></div>
+    <img>
+
+
+
+    <!-- 
+    <script sign='xinba'>
+        var div = document.getElementById('btns'),
+            img = document.querySelector('img'),
+            imgs = [
+                'img/1.jpg',
+                'img/2.jpg',
+                'img/3.jpg',
+                'img/4.jpg'
+            ]
+        var frag = document.createDocumentFragment();
+        for (var i = 0, len = imgs.length; i < len; i++) {
+            var btn = document.createElement('button');
+            btn.innerText = `第${i + 1}张图片`;
+            frag.appendChild(btn);
+        }
+        div.appendChild(frag);
+        img.src = imgs[0];
+        var btns = document.getElementsByTagName('button');
+        Array.from(btns).forEach(function (value, index, arr) {
+            arr[index].onclick = function () {
+                console.log(this, index);
+                img.src = imgs[index];
+            }
+        })
+    </script> -->
+
+
+
+    <script sign='袁进仿写'>
+
+        var imgs = [
+            'img/1.jpg',
+            'img/2.jpg',
+            'img/3.jpg',
+            'img/4.jpg'
+        ],
+            btns = document.getElementById('btns'),
+            img = document.querySelector('img');
+            img.src = imgs[0];
+        for (var i = 0, len = imgs.length; i < len; i++) {
+            var btn = document.createElement('button');
+            btn.dataset.src = imgs[i];
+            btn.innerText = `第${i + 1}张图片`;
+            btns.appendChild(btn);
+        }
+
+        btns.onclick = function (e) {
+            img.src = e.target.dataset.src;
+        }
+
+    </script>
+</body>
+
+</html>

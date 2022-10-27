@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        h2 {
+            background: #F0F0F0;
+            padding: 5px 6px 4px 6px;
+            border: 1px solid #E0E0E0;
+            cursor: pointer;
+            font-size: 16px;
+            color: #666;
+            font-weight: normal;
+            margin: 0
+        }
+
+        h2+ul {
+            opacity: 0;
+            transition: all 1s;
+        }
+
+        h2+ul li {
+            margin-left: 20px;
+            font-size: 14px;
+            height: 30px;
+            line-height: 30px;
+            border-bottom: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        .wrapper>ul>li {
+            height: 32px;
+            padding: 10px 0;
+            transition: all 1s;
+            overflow: hidden;
+        }
+
+        .active ul {
+            opacity: 1;
+        }
+        .wrapper>ul>li.active {
+            height: 187px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <ul>
+            <li>
+                <h2>电影</h2>
+                <ul>
+                    <li>Lorem ipsum dolor sit.</li>
+                    <li>Eos accusantium neque blanditiis.</li>
+                    <li>Veniam harum aperiam reprehenderit.</li>
+                    <li>Modi omnis necessitatibus ad.</li>
+                    <li>Recusandae itaque magni iusto.</li>
+                </ul>
+            </li>
+            <li>
+                <h2>书籍</h2>
+                <ul>
+                    <li>Eius cupiditate nesciunt consectetur!</li>
+                    <li>Nisi similique tempora quasi?</li>
+                    <li>Provident consequuntur maiores.</li>
+                    <li>Quasi explicabo eveniet ea.</li>
+                    <li>Reprehenderit numquam aperiam?</li>
+                </ul>
+            </li>
+            <li>
+                <h2>游戏</h2>
+                <ul>
+                    <li>Quibusdam distinctio sit consequatur!</li>
+                    <li>Laborum, ex expedita. Delectus.</li>
+                    <li>Tenetur hic quibusdam aliquid?</li>
+                    <li>Sunt dolorem ut accusamus.</li>
+                    <li>Nulla possimus quasi debitis.</li>
+                </ul>
+            </li>
+            <li>
+                <h2>动漫</h2>
+                <ul>
+                    <li>Maxime reprehenderit est consectetur.</li>
+                    <li>Laudantium assumenda quaerat modi.</li>
+                    <li>A minus assumenda consequatur.</li>
+                    <li>Repellendus, nisi dolores. Nostrum.</li>
+                    <li>Sapiente, voluptatibus iste. Facere!</li>
+                </ul>
+            </li>
+            <li>
+                <h2>音乐</h2>
+                <ul>
+                    <li>Dicta voluptatem error enim!</li>
+                    <li>Aspernatur ratione fuga veritatis.</li>
+                    <li>Asperiores illum minus cumque.</li>
+                    <li>Quisquam magnam soluta fuga.</li>
+                    <li>Ullam cumque doloremque magnam.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        var wrapper = document.querySelector(".wrapper");
+        wrapper.onclick = function (e) {
+            if (e.target.tagName === "H2") {
+                var curr = document.querySelector(".active");
+                if (curr && curr !== e.target.parentNode) {
+                        curr.classList.toggle("active");
+                }
+                e.target.parentNode.classList.toggle("active");
+            }
+        }
+    </script>
+</body>
+
+</html>

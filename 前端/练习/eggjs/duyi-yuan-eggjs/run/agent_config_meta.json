@@ -1,0 +1,285 @@
+{
+  "keys": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\config\\config.default.js",
+  "view": {
+    "defaultViewEngine": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\config\\config.default.js",
+    "mapping": {
+      ".tpl": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\config\\config.default.js"
+    },
+    "root": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-view\\config\\config.default.js",
+    "cache": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-view\\config\\config.local.js",
+    "defaultExtension": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-view\\config\\config.default.js"
+  },
+  "security": {
+    "csrf": {
+      "enable": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\config\\config.default.js",
+      "type": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-security\\config\\config.default.js",
+      "ignoreJSON": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-security\\config\\config.default.js",
+      "useSession": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-security\\config\\config.default.js",
+      "cookieName": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-security\\config\\config.default.js",
+      "sessionName": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-security\\config\\config.default.js",
+      "headerName": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-security\\config\\config.default.js",
+      "bodyName": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-security\\config\\config.default.js",
+      "queryName": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-security\\config\\config.default.js",
+      "refererWhiteList": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "domainWhiteList": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-security\\config\\config.default.js",
+    "protocolWhiteList": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-security\\config\\config.default.js",
+    "defaultMiddleware": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-security\\config\\config.default.js",
+    "xframe": {
+      "enable": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "hsts": {
+      "enable": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-security\\config\\config.local.js",
+      "maxAge": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-security\\config\\config.default.js",
+      "includeSubdomains": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "dta": {
+      "enable": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "methodnoallow": {
+      "enable": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "noopen": {
+      "enable": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "nosniff": {
+      "enable": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "referrerPolicy": {
+      "enable": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "xssProtection": {
+      "enable": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "csp": {
+      "enable": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-security\\config\\config.default.js",
+      "policy": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "ssrf": {
+      "ipBlackList": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-security\\config\\config.default.js",
+      "ipExceptionList": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-security\\config\\config.default.js",
+      "checkAddress": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-security\\config\\config.default.js"
+    }
+  },
+  "baseUrl": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\config\\config.default.js",
+  "middleware": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\config\\config.default.js",
+  "mid": {
+    "match": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\config\\config.default.js"
+  },
+  "session": {
+    "maxAge": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-session\\config\\config.default.js",
+    "key": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-session\\config\\config.default.js",
+    "httpOnly": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-session\\config\\config.default.js",
+    "encrypt": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-session\\config\\config.default.js",
+    "logValue": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-session\\config\\config.default.js"
+  },
+  "helper": {
+    "shtml": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-security\\config\\config.default.js"
+  },
+  "jsonp": {
+    "limit": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-jsonp\\config\\config.default.js",
+    "callback": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-jsonp\\config\\config.default.js",
+    "csrf": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-jsonp\\config\\config.default.js"
+  },
+  "onerror": {
+    "errorPageUrl": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-onerror\\config\\config.default.js",
+    "appErrorFilter": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-onerror\\config\\config.default.js",
+    "templatePath": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-onerror\\config\\config.default.js"
+  },
+  "i18n": {
+    "defaultLocale": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-i18n\\config\\config.default.js",
+    "dirs": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-i18n\\config\\config.default.js",
+    "queryField": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-i18n\\config\\config.default.js",
+    "cookieField": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-i18n\\config\\config.default.js",
+    "cookieDomain": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-i18n\\config\\config.default.js",
+    "cookieMaxAge": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-i18n\\config\\config.default.js"
+  },
+  "watcher": {
+    "type": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-watcher\\config\\config.local.js",
+    "eventSources": {
+      "default": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-watcher\\config\\config.default.js",
+      "development": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-watcher\\config\\config.default.js"
+    }
+  },
+  "customLogger": {
+    "scheduleLogger": {
+      "consoleLevel": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-schedule\\config\\config.default.js",
+      "file": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-schedule\\config\\config.default.js"
+    }
+  },
+  "schedule": {
+    "directory": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-schedule\\config\\config.default.js"
+  },
+  "multipart": {
+    "mode": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-multipart\\config\\config.default.js",
+    "autoFields": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-multipart\\config\\config.default.js",
+    "defaultCharset": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fieldNameSize": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fieldSize": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fields": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fileSize": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-multipart\\config\\config.default.js",
+    "files": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fileExtensions": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-multipart\\config\\config.default.js",
+    "whitelist": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-multipart\\config\\config.default.js",
+    "allowArrayField": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-multipart\\config\\config.default.js",
+    "tmpdir": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-multipart\\config\\config.default.js",
+    "cleanSchedule": {
+      "cron": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-multipart\\config\\config.default.js",
+      "disable": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-multipart\\config\\config.default.js"
+    }
+  },
+  "development": {
+    "watchDirs": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-development\\config\\config.default.js",
+    "ignoreDirs": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-development\\config\\config.default.js",
+    "fastReady": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-development\\config\\config.default.js",
+    "reloadOnDebug": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-development\\config\\config.default.js",
+    "overrideDefault": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-development\\config\\config.default.js",
+    "overrideIgnore": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-development\\config\\config.default.js"
+  },
+  "logrotator": {
+    "filesRotateByHour": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "hourDelimiter": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "filesRotateBySize": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "maxFileSize": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "maxFiles": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "rotateDuration": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "maxDays": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-logrotator\\config\\config.default.js"
+  },
+  "static": {
+    "prefix": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-static\\config\\config.default.js",
+    "dir": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-static\\config\\config.default.js",
+    "dynamic": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-static\\config\\config.default.js",
+    "preload": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-static\\config\\config.default.js",
+    "buffer": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-static\\config\\config.default.js",
+    "maxFiles": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-static\\config\\config.default.js"
+  },
+  "nunjucks": {
+    "autoescape": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-view-nunjucks\\config\\config.default.js",
+    "throwOnUndefined": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-view-nunjucks\\config\\config.default.js",
+    "trimBlocks": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-view-nunjucks\\config\\config.default.js",
+    "lstripBlocks": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-view-nunjucks\\config\\config.default.js",
+    "cache": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg-view-nunjucks\\config\\config.local.js"
+  },
+  "env": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+  "name": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+  "cookies": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+  "proxy": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+  "maxIpsCount": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+  "maxProxyCount": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+  "protocolHeaders": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+  "ipHeaders": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+  "hostHeaders": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+  "pkg": {
+    "name": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+    "version": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+    "description": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+    "main": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+    "scripts": {
+      "dev": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js"
+    },
+    "keywords": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+    "author": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+    "license": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+    "dependencies": {
+      "axios": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+      "egg": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+      "egg-view-nunjucks": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js"
+    },
+    "devDependencies": {
+      "egg-bin": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js"
+    }
+  },
+  "baseDir": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+  "HOME": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+  "rundir": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+  "dump": {
+    "ignore": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js"
+  },
+  "confusedConfigurations": {
+    "bodyparser": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+    "notFound": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+    "sitefile": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+    "middlewares": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+    "httpClient": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js"
+  },
+  "notfound": {
+    "pageUrl": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js"
+  },
+  "siteFile": {
+    "/favicon.ico": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js"
+  },
+  "bodyParser": {
+    "enable": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+    "encoding": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+    "formLimit": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+    "jsonLimit": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+    "textLimit": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+    "strict": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+    "queryString": {
+      "arrayLimit": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+      "depth": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+      "parameterLimit": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js"
+    },
+    "onerror": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js"
+  },
+  "logger": {
+    "dir": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+    "encoding": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+    "env": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+    "level": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+    "consoleLevel": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+    "disableConsoleAfterReady": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+    "outputJSON": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+    "buffer": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+    "appLogName": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+    "coreLogName": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+    "agentLogName": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+    "errorLogName": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+    "coreLogger": {
+      "consoleLevel": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.local.js"
+    },
+    "allowDebugAtProd": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js"
+  },
+  "httpclient": {
+    "enableDNSCache": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+    "dnsCacheLookupInterval": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+    "dnsCacheMaxLength": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+    "request": {
+      "timeout": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js"
+    },
+    "httpAgent": {
+      "keepAlive": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+      "freeSocketTimeout": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+      "maxSockets": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+      "maxFreeSockets": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js"
+    },
+    "httpsAgent": {
+      "keepAlive": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+      "freeSocketTimeout": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+      "maxSockets": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+      "maxFreeSockets": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js"
+    }
+  },
+  "meta": {
+    "enable": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+    "logging": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js"
+  },
+  "coreMiddleware": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+  "workerStartTimeout": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+  "serverTimeout": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+  "cluster": {
+    "listen": {
+      "path": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+      "port": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+      "hostname": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js"
+    }
+  },
+  "clusterClient": {
+    "maxWaitTime": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js",
+    "responseTimeout": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js"
+  },
+  "onClientError": "E:\\hfx学习树\\前端\\练习\\eggjs\\duyi-yuan-eggjs\\node_modules\\egg\\config\\config.default.js"
+}

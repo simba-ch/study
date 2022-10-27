@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .container {
+            float: left;
+        }
+
+        .score {
+            float: left;
+            position: relative;
+            width: 100px;
+            margin-left: 10px;
+            margin-top: 5px;
+        }
+
+        span {
+            display: none;
+            position: absolute;
+            font-size: 14px;
+            font-family: 'Microsoft YaHei';
+            left: 0;
+            top: 0;
+        }
+
+        .scoreDisplay {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='container'>
+        <img src="./images/empty.png" alt="">
+        <img src="./images/empty.png" alt="">
+        <img src="./images/empty.png" alt="">
+        <img src="./images/empty.png" alt="">
+        <img src="./images/empty.png" alt="">
+    </div>
+    <div class="score">
+        <span>很差</span>
+        <span>较差</span>
+        <span>一般</span>
+        <span>较好</span>
+        <span>很好</span>
+    </div>
+
+
+
+    <script>
+        var stars = document.querySelectorAll('.container img'),
+            texts = document.querySelectorAll('.score span');
+        Array.from(stars).forEach(function (vue, i, arr) {
+            arr[i].onmouseover = function () {
+                for (var j = 0; j <= i; j++) {
+                    stars[j].src = './images/shining.png';
+                }
+                if (document.querySelector('.scoreDisplay')) document.querySelector('.scoreDisplay').classList.remove('scoreDisplay');
+                texts[i].className = 'scoreDisplay';
+            }
+            arr[i].onmouseout = function () {
+                for (var j = 0; j <= i; j++) {
+                    stars[j].src = './images/empty.png';
+                }
+            }
+        })
+        document.querySelector('div.container').onmouseout = function () {
+            if (document.querySelector('.scoreDisplay'))
+                document.querySelector('.scoreDisplay').classList.remove('scoreDisplay');
+        }
+
+    </script>
+</body>
+
+
+
+</html>

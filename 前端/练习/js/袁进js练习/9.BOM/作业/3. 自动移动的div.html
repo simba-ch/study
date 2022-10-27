@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .move {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100px;
+            height: 100px;
+            background: red;
+            border-radius: 50%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="move">
+
+    </div>
+
+    <script>
+        var div = document.getElementsByTagName('div')[0];
+        var disX,disY, cont = 5;
+        div.onclick = function () {
+            setInterval(function () {
+                var prevLeft = parseFloat(getComputedStyle(div).left),
+                    prevTop = parseFloat(getComputedStyle(div).top),
+                    maxWidth = document.documentElement.clientWidth - parseFloat(div.offsetWidth),
+                    maxHeight = document.documentElement.clientHeight - parseFloat(div.offsetHeight);
+                if (prevLeft <= 0) {
+                    div.style.left = 0;
+                    disX = cont;
+                }
+                else if(prevLeft >= maxWidth) {
+                    div.style.left = maxWidth + 'px';
+                    disX = -cont;
+                }
+                if(prevTop <= 0) {
+                    div.style.top = 0;
+                    disY = cont;
+                }
+                else if (prevTop >= maxHeight) {
+                    div.style.top = maxHeight + 'px';
+                    disY = -cont;
+                }
+                div.style.left = prevLeft + disX + 'px';
+                div.style.top = prevTop + disY + 'px';
+            }, 30)
+        }
+
+
+
+    </script>
+</body>
+
+</html>

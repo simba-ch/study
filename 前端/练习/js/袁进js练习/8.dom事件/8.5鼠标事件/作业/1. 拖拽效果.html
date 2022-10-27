@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id='circle'
+        style="background-color:rgb(214, 20, 20); border-radius:50%; border:1px solid black; width: 100px; height: 100px; position: absolute;">
+    </div>
+</body>
+
+<script sign = '袁进'>
+    var circle = document.getElementById('circle');
+    var style = getComputedStyle(circle),
+        initLeft = parseFloat(style.left),
+        initTop = parseFloat(style.top);
+    circle.onmousedown = function () {
+        circle.style.cursor = 'move';
+        window.onmousemove = function (e) {
+            initLeft += e.movementX;
+            initTop += e.movementY;
+            circle.style.left = initLeft + 'px';
+            circle.style.top = initTop + 'px';
+        }
+
+    }
+
+    window.onmouseup = function () {
+        window.onmousemove = null;
+        circle.style.cursor = '';
+    }
+</script>
+
+</html>

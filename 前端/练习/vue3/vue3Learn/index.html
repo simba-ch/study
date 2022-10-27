@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      crossorigin="anonymous"
+      integrity="sha512-KvaXQuRkPKYVQnd5RtRnFPR51W3+Vz+uq0IX8/TYaA2F6hDS2VQQv11BjdHES9boHiHXmqT9oC4H3AJLbq2Szg=="
+      src="https://lib.baomitu.com/vue/3.2.31/vue.global.js"
+    ></script>
+  </head>
+  <body>
+    <!-- <div id="App">
+      <ol>
+    
+        <todo-item></todo-item>
+      </ol>
+    </div> -->
+
+    <div id="App">
+      <div>{{count}}</div>
+      <div v-if="isIf">我是v-if</div>
+      <div v-show="isShow">我是v-show</div>
+      <div>
+        <button @click="toggleIf">点击切换if</button>
+        <button @click="toggleShow">点击切换show</button>
+      </div>
+      <ul>
+        <li
+          v-for="(value,key,index) in myObject"
+          :ref="el => {
+          if(el)lis[index] = el;
+        }"
+        >
+          {{index}}.{{key}} - {{value}}
+        </li>
+      </ul>
+
+      <ul v-for="numbers in sets">
+        <li v-for="n in even(numbers)" :key="n">{{ n }}</li>
+      </ul>
+
+      <button @click="consoleEvent">打印event</button>
+      <div>
+        <label for="noModel">原生事件</label>
+        <input
+          id="noModel"
+          type="text"
+          :value="inpValue"
+          @input="changeInpValue"
+        />
+        <div>
+          <label for="model">model绑定</label>
+          <input id="model" type="text" v-model="inpValue" />
+        </div>
+      </div>
+      <div>
+        <input type="radio" id="one" value="One" v-model="picked" />
+        <label for="one">One</label>
+        <br />
+        <input type="radio" id="two" value="Two" v-model="picked" />
+        <label for="two">Two</label>
+        <br />
+        <span>Picked: {{ picked }}</span>
+      </div>
+      <input
+        type="checkbox"
+        v-model="toggle"
+        true-value="yes"
+        false-value="no"
+        name="checkout"
+      />
+      <div>
+        <form @submit.prevent="submit">
+          <input type="radio" v-model="pick" v-bind:value="a" name="a" />
+          <input type="radio" v-model="pick" v-bind:value="b" name="a" />
+          <button type="submit">提交</button>
+        </form>
+      </div>
+
+      <div :style="{fontSize:postFontSize + 'em'} ">
+        <blog-post
+          @enlarge-text="postFontSize += 1"
+          title="My journey with Vue"
+        ></blog-post>
+        <blog-post title="Blogging with Vue"></blog-post>
+        <blog-post title="Why Vue is so fun"></blog-post>
+      </div>
+
+      <div>
+        <blog-post v-for="post of posts" :key="post.id" :title="post.title">
+        </blog-post>
+      </div>
+
+      <div :style="{fontSize:postFontSize + 'em'} ">
+        <blog-post @enlarge-text="getSet" title="一篇新文章"></blog-post>
+        <blog-post
+          @enlarge-text="postFontSize += $event"
+          title="另一篇新文章"
+        ></blog-post>
+      </div>
+
+      <div>
+        <todo-list>
+          <template #header> <h2>header</h2> </template>
+          <template v-slot="slotProps">
+            <i class="fas fa-check"></i>
+            <span class="green">{{ slotProps.item }}</span>
+          </template>
+        </todo-list>
+      </div>
+
+      <div>
+        <install-print></install-print>
+      </div>
+    </div>
+
+    <script>
+      // const TodoItem = {
+      //   template: `<li>This is a todo</li>`,
+      // };
+      // const app = Vue.createApp({
+      //   components: {
+      //     TodoItem, // 注册一个新组件
+      //   },
+      //   methods:{
+
+      //   }
+      // });
+
+      const mixin = {
+        created() {
+          console.log("我是mixin中的this:", this);
+        },
+      };
+
+      const app = Vue.createApp({
+        data() {
+          return {
+            count: 4,
+            isIf: true,
+            isShow: false,
+            myObject: {
+              title: "How to do lists in Vue",
+              author: "Jane Doe",
+              publishedAt: "2016-04-10",
+            },
+            numbers: [1, 2, 3, 4, 5],
+            sets: [
+              [1, 2, 3, 4, 5],
+              [6, 7, 8, 9, 10],
+            ],
+            inpValue: "",
+            picked: "",
+            toggle: "",
+            pick: "",
+            a: "a",
+            b: "b",
+            posts: [
+              { id: 1, title: "My journey with Vue" },
+              { id: 2, title: "Blogging with Vue" },
+              { id: 3, title: "Why Vue is so fun" },
+            ],
+            postFontSize: 1,
+            lis: [],
+          };
+        },
+        mixins: [mixin],
+        mounted() {
+          console.log("lis:", this.lis);
+        },
+        methods: {
+          toggleIf() {
+            this.isIf = !this.isIf;
+          },
+          toggleShow() {
+            this.isShow = !this.isShow;
+          },
+          even(numbers) {
+            return numbers.filter((number) => number % 2 === 0);
+          },
+          consoleEvent(ev) {
+            console.log(
+              "🚀 ~ file: index.html ~ line 83 ~ consoleEvent ~ ev",
+              ev
+            );
+          },
+          changeInpValue(event) {
+            console.log(
+              "🚀 ~ file: index.html ~ line 94 ~ changeInpValue ~ event",
+              (this.inpValue = event.target.value)
+            );
+          },
+          submit(event) {
+            const formData = new FormData(event.target);
+            formData.append("b", "b");
+            for (var pair of formData.entries()) {
+              console.log(pair[0] + ", " + pair[1]);
+            }
+            console.log(formData.entries());
+          },
+          getSet($event) {
+            console.log(
+              "🚀 ~ file: index.html ~ line 167 ~ getSet ~ set",
+              $event
+            );
+          },
+        },
+        computed: {
+          evenNumbers() {
+            return this.numbers.filter((number) => number % 2 === 0);
+          },
+        },
+      });
+
+      app.component("blog-post", {
+        props: ["title"],
+        emits: ["enlargeText"],
+        template: `
+        <h4>{{ title }}</h4>
+        <button @click='$emit("enlargeText",0.1,2,3)'>Enlarge text</button>`,
+      });
+
+      let internalInstance;
+
+      app.component("todo-list", {
+        data() {
+          return {
+            items: ["Feed a cat", "Buy milk"],
+          };
+        },
+        template: `
+        <ul>
+          <li v-for="(item,index) of items" :key="index">
+              <header>
+                <slot name='header'></slot>
+              </header>
+             <slot :item="item" :index="index"></slot>
+           </li>
+         </ul>
+        `,
+        setup(props, ctx) {
+          const { getCurrentInstance } = Vue;
+          internalInstance = getCurrentInstance(); // 有效
+          console.log(
+            "🚀 ~ file: index.html ~ line 244 ~ setup ~ internalInstance",
+            internalInstance
+          );
+
+          const { reactive, toRefs } = Vue;
+          const reactiveObj = reactive({
+            name: "simba",
+            age: 18,
+            address: {
+              province: "江苏省",
+              city: "无锡市",
+              area: "梁溪区",
+              other: {
+                a: "a",
+                b: "b",
+              },
+            },
+          });
+          const refsObj = toRefs(reactiveObj);
+          console.log(
+            "🚀 ~ file: index.html ~ line 254 ~ setup ~ refsObj",
+            refsObj
+          );
+          console.log(
+            "🚀 ~ file: index.html ~ line 254 ~ setup ~ refsObj",
+            refsObj.name
+          );
+          console.log(
+            "🚀 ~ file: index.html ~ line 254 ~ setup ~ refsObj",
+            refsObj.address.value.other
+          );
+
+          console.log("🚀 ~ file: index.html ~ line 217 ~ setup ~ ctx", ctx);
+        },
+        mounted() {
+          console.log(this === internalInstance);
+          console.log("🚀 ~ file: index.html ~ line 284 ~ mounted ~ this", this)
+        },
+      });
+
+      app.component("install-print", {
+        props: ["title"],
+        emits: ["enlargeText"],
+        methods: {
+          printInstall() {
+            console.log("this:", this);
+          },
+        },
+        template: `
+        <div>不要管我</div>
+        <button @click='printInstall'>点击我打印this</button>`,
+      });
+
+      console.log("🚀 ~ file: index.html ~ line 22 ~ App", app);
+      const vm = app.mount("#App");
+      console.log("🚀 ~ file: index.html ~ line 24 ~ vm", vm);
+    </script>
+  </body>
+</html>

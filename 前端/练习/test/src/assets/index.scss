@@ -1,0 +1,11 @@
+nav,aside {
+  a {
+    color:red
+  }
+}
+
+.disable{
+  
+  color:grey;
+  @extend a;
+}

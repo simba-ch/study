@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      @keyframes run {
+        0%{
+          transform: rotate(30deg);
+        }
+        100%{
+          transform: rotate(-30deg);
+        }
+      }
+      .clock {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        left: calc(50% - 100px);
+        top: 200px;
+        background-color: black;
+        border-radius: 50%;
+        transform-origin:100px -200px ;
+        animation: run 1s ease  alternate infinite;
+      }
+      .line {
+        width: 10px;
+        height: 210px;
+        position: absolute;
+        background-color: black;
+        top: -210px;
+        left: 50%;
+      }
+      span{
+        float: left;
+        margin: 4px;
+        background-color: black;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px; 
+      }
+      span:hover{
+        transform: scale(2,2);
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div class="clock">
+      <div class="line"></div>
+    </div>
+   <div>
+     <span></span>
+     <span></span>
+     <span></span>
+     <span></span>
+     <span></span>
+   </div>
+    </script>
+  </body>
+</html>

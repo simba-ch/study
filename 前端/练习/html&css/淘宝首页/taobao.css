@@ -1,0 +1,362 @@
+@import '../reset.css';
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('font/iconfont.eot');
+    src: url('font/iconfont.eot?#iefix') format('embedded-opentype'),
+        url('font/iconfont.woff2') format('woff2'),
+        url('font/iconfont.woff') format('woff'),
+        url('font/iconfont.ttf') format('truetype'),
+        url('font/iconfont.svg#iconfont') format('svg');
+  }
+
+  .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+
+  .layer {
+    width: 1190px;
+    margin:0 auto;
+  }
+
+  .fl {
+      float: left;
+  }
+
+  .fr {
+      float: right;
+  }
+
+  .clearfix::after {
+        content: '';
+        display: block;
+        clear: both;
+  }
+
+  .mr5 {
+    margin-right: 5px;
+}
+ 
+.mr7 {
+    margin-right:7px ;
+}
+
+.mr10 {
+    margin-right: 10px;
+} 
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.c4 {
+    color: #f40;
+}
+
+.c5 {
+    color: #f50;
+}
+
+.c6 {
+    color: #8d7afb;
+}
+
+.c7 {
+    color: #a8c001;
+}
+
+
+body {
+    font: 12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+    color: #3c3c3c;
+    background-color: #f4f4f4;
+}
+
+
+
+/* 头部信息 */
+#headMessage li{
+    float: left;
+    line-height: 35px;
+    padding: 0 6px;
+    font-size: 0;
+}
+
+#headMessage a {
+    color: #6c6c6c;
+    font-size: 12px;
+}
+
+#headMessage a:hover {
+    color: #f40;
+}
+
+#headMessage a.login {
+    color: #f22e00;
+}
+
+#headMessage span {
+    font-size: 12px;
+}
+
+#headMessage span.arrow {
+    margin-left: 7px;
+}
+
+
+/* 头部广告 */
+#headAd {
+    background-color: #f12f04;
+}
+
+#headAd .go {
+    display: block;
+    padding: 10px 10px 10px 15px;
+}
+
+#headAd .go img {
+    width: 80px;
+    height: 80px;
+}
+
+#headAd ul {
+    padding-top:13px;
+}
+
+#headAd li {
+    float: left;
+    width: 209px;
+    height: 75px;
+    margin-right: 10px;
+    padding: 12px 15px 0 15px;
+    box-sizing: border-box;
+}
+
+#headAd li h3 {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+#headAd li p {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+#headAd li a {
+    color: #fff;
+    display:block;
+}
+
+#headAd li a img {
+    width: 52px;
+    height: 52px;
+    border-radius: 5px;
+}
+
+#headAd li.item1 {
+    background: url(images/adbg_01.png) no-repeat;
+}
+
+#headAd li.item2 {
+    background: url(images/adbg_02.png) no-repeat;
+}
+
+#headAd li.item3 {
+    background: url(images/adbg_03.png) no-repeat;
+}
+
+#headAd li.item4 {
+    background: url(images/adbg_04.png) no-repeat;
+}
+
+#headAd li.item5 {
+    background: url(images/adbg_05.png) no-repeat;
+    margin-right: 0;
+}
+
+/* 头部搜索 */
+#headSearch{
+	background-color: #fff;
+	padding: 24px 0 10px 0;
+}
+#headSearch h1 a{
+	display: block;
+	width: 190px;
+	height: 58px;
+	background: url(images/logo.png) center no-repeat;
+	text-indent: -9999px;
+	overflow: hidden;
+	margin-top: 8px;
+}
+
+#headSearch .code{
+	width: 72px;
+	height: 86px;
+	border: 1px solid #eee;
+	position: relative;
+	margin-right: 110px;
+	text-align: center;
+}
+#headSearch .code img{
+	width: 62px;
+	height: 62px;
+}
+#headSearch .close{
+	position: absolute;
+	left: -16px;
+	top: -1px;
+
+	width: 14px;
+	height: 14px;
+	line-height: 14px;
+	font-size: 14px;
+	border: 1px solid #eee;
+	color: #ddd;
+	cursor: pointer;
+}
+
+#headSearch .search{
+	width: 630px;
+	margin: 0 auto;
+}
+#headSearch .searchTab{
+	height: 22px;
+	padding-left: 17px;
+}
+#headSearch .searchTab li{
+	float: left;
+	width: 36px;
+	line-height: 22px;
+	margin-right: 4px;
+	text-align: center;
+	color: #f40;
+	cursor: pointer;
+}
+#headSearch .searchTab li:hover{
+	background-color: #ffeee5;
+}
+#headSearch .searchTab li.active{
+	color: #fff;
+	font-weight: bold;
+
+	background-image: linear-gradient(to right,#ff9000,#ff5000);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff9000', endColorstr='#ffff5000', GradientType=1);
+	border-radius: 6px 6px 0 0;
+}
+#headSearch .searchContent{
+	height: 40px;
+}
+#headSearch .searchBox{
+	width: 554px;
+	height: 40px;
+	box-sizing: border-box;
+	border: 2px solid #ff5000;
+	border-right: none;
+	border-radius: 20px 0 0 20px;
+	overflow: hidden;
+	position: relative;
+}
+#headSearch .searchBox input{
+	width: 490px;
+	height: 36px;
+	line-height: 36px;
+	outline: none;
+	border: none;
+	text-indent: 10px;
+
+	position: absolute;
+	z-index: 2;
+	background-color: transparent;	/* 透明，为了能够看到后面的文字 */
+}
+#headSearch .placeholder{
+	position: absolute;
+	top: 6px;
+	left: 14px;
+}
+#headSearch .placeholder span{
+	color: #9c9c9c;
+	vertical-align: 1px;
+}
+#headSearch .imgSearch{
+	font-size: 28px;
+	color: #9c9c9c;
+	position: absolute;
+	right: 20px;
+	top: -2px;
+	cursor: pointer;
+}
+#headSearch .searchContent button{
+	width: 74px;
+	height: 40px;
+	text-align: center;
+	font-size: 18px;
+	line-height: 40px;
+	color: #fff;
+	border: none;
+	background-image: linear-gradient(to right,#ff9000,#ff5000);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff9000', endColorstr='#ffff5000', GradientType=1);
+	border-radius: 0 20px 20px 0;
+}
+#headSearch .hotKey{
+	height: 25px;
+	line-height: 25px;
+}
+#headSearch .hotKey a:hover{
+	color: #f50;
+}
+
+
+/* 导航 */
+#nav h2{
+	width: 190px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 16px;
+	color: #fff;
+	text-align: center;
+	background-color: #f50;
+}
+#nav ul{
+	margin-left: 190px;
+	height: 30px;
+	background-image: linear-gradient(to right,#ff9000,#ff5000);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff9000', endColorstr='#ffff5000', GradientType=1);
+}
+#nav ul li{
+	float: left;
+	line-height: 30px;
+	margin: 0 7px;
+	font-size: 14px;
+	color: #fff;
+	padding: 0 5px;
+
+	position: relative;
+}
+#nav ul li.size{
+	font-size: 16px;
+}
+#nav ul li a{
+	color: #fff;
+	font-weight: bold;
+}
+#nav ul li.line{
+	margin: 0;
+	padding: 0;
+}
+#nav ul li:hover:before{
+	content: '';
+	position: absolute;
+	width: 23px;
+	height: 13px;
+	background-image: url(../images/ico_01.gif);
+
+	top: -13px;
+	left: 50%;
+	margin-left: -12px;
+}
+

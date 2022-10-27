@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>
+        <input type="text">
+        <button>submit</button>
+    </p>
+    <ul></ul>
+
+    <script>
+        // 注册添加事件
+        var ul = document.querySelector('ul');
+        var submitBtn = document.querySelector('button');
+        var text = document.querySelector('input[type = text]');
+        submitBtn.onclick = function () {
+            var li = document.createElement('li');
+            li.innerHTML = `<span>${text.value}</span><button>delete</button>`;
+            ul.appendChild(li);
+            text.value = '';
+        }
+
+        // 注册删除事件
+        ul.onclick = function (e) {
+            if (e.target.tagName = 'BUTTON') e.target.parentElement.remove();
+        }
+    </script>
+</body>
+
+</html>

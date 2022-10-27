@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* //      1. 编写一个函数，用于返回一个友好的日期字符串格式
+        //      年-月-日 时:分:秒
+        
+            function fnGetDate (date) {
+            var year = date.getFullYear();
+            var month = date.getMonth();
+            var day = date.getDate();
+            var hours = date.getHours();
+            var minutes = date.getMinutes();
+            var seconds = date.getSeconds();
+            console.log(`${year}年-${month}月-${day}日 ${hours}时:${minutes}分:${seconds}秒`);
+        }
+        
+        fnGetData(new Date()); */
+
+
+
+
+
+        /* 
+                // 2. 给定用户的生日（年、月、日），计算该用户的年龄
+                function getAge(date) {
+                    var present = new Date();
+                    if (date.getMonth() < 7) {
+                        console.log(present.getFullYear() - date.getFullYear());
+                    }
+                    else {
+                        console.log(present.getFullYear() - date.getFullYear() - 1);
+                    }
+        
+                }
+                getAge(new Date(1969, 03, 18)); */
+
+        // 3. 根据系统当前的月份，输出这一个月每一天的星期
+        // 2019年6月1日：星期六
+        // 2019年6月2日：星期日
+        // .....
+        // 2019年6月30日：星期日
+        function week(date) {
+
+            var year = date.getFullYear();
+            var month = date.getMonth();
+            var day = date.getDate();
+            var week, times;
+            if (month === 1) {
+                times = 28;
+                if (year % 4 === 0 && year % 100 !== 0 || year % 400 === 0) {
+                    times = 29;
+                }
+
+            } else if (month === 0 || month === 2 || month === 4 || month === 6 || month === 7 || month === 9 || month === 11) {
+                times = 31;
+            } else {
+                times = 30;
+            }
+            for (i = 1; i <= times; i++) {
+
+                switch (new Date(year, month, i).getDay()) {
+                    case 0:
+                        week = '星期日';
+                        break;
+                    case 1:
+                        week = '星期一';
+                        break;
+                    case 2:
+                        week = '星期二';
+                        break;
+                    case 3:
+                        week = '星期三';
+                        break;
+                    case 4:
+                        week = '星期四';
+                        break;
+                    case 5:
+                        week = '星期五';
+                        break;
+                    case 6:
+                        week = '星期六';
+                }
+                console.log(`${year}年${month + 1}月${i}日：${week}`);
+
+            }
+        }
+
+        week(new Date(2020, 1, 5));
+    </script>
+
+</body>
+
+</html>

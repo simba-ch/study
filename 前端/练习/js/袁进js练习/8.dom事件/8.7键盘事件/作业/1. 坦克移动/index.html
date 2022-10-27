@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: black;
+        }
+
+        .tank {
+            top: 400px;
+            left: 500px;
+            position: fixed;
+
+        }
+    </style>
+</head>
+
+<body>
+    <img class='tank' src="./imgs/tankU.gif" alt="">
+    <script>
+        var img = document.querySelector('.tank');
+        window.addEventListener('keydown', function (e) {
+            
+            var imgStyle = getComputedStyle(img);
+            switch (e.key) {
+                case 'ArrowUp':
+                    window.onkeyup = function (e) {
+                        e.key = 'ArrowUp';
+                    }
+                    img.style.top = parseFloat(imgStyle.top) - 4 + 'px';
+                    img.src = "./imgs/tankU.gif";
+                    break;
+                case 'ArrowDown':
+                    img.style.top = parseFloat(imgStyle.top) + 4 + 'px';
+                    img.src = "./imgs/tankD.gif";
+                    break;
+                case 'ArrowLeft':
+                    img.style.left = parseFloat(imgStyle.left) - 4 + 'px';
+                    img.src = "./imgs/tankL.gif";
+                    break;
+                case 'ArrowRight':
+                    img.style.left = parseFloat(imgStyle.left) + 4 + 'px';
+                    img.src = "./imgs/tankR.gif";
+                    break;
+            }
+
+            e.preventDefault();
+        })
+    </script>
+</body>
+
+</html>

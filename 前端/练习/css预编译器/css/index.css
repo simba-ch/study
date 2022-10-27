@@ -1,0 +1,30 @@
+@charset "UTF-8";
+#main .seriousError {
+  font-size: 18px;
+}
+#main .seriousError:hover {
+  color: blue;
+}
+
+#error, #main .seriousError:hover {
+  color: red;
+}
+
+a#error:hover, #main a.seriousError:hover {
+  color: blue;
+}
+
+/*========华丽分割线=========*/
+#main .seriousError {
+  font-size: 18px;
+}
+
+.error, #main .seriousError {
+  color: red;
+}
+
+a.error:hover, #main a.seriousError:hover {
+  color: blue;
+}
+
+/*# sourceMappingURL=index.css.map */

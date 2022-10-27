@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../../jquery.js"></script>
+    <link rel="stylesheet" href="css/2020-01-14.css">
+  </head>
+  <body>
+    <div class="wrap">
+        <ul class="init">
+          <li>
+            <div class="inner">
+              <div class="bg"></div>
+              <h2>images1</h2>
+            </div>
+            <div class="direction">
+              <div class="header">bird1</div>
+              <div class="close"></div>
+            </div>
+          </li>
+          <li>
+            <div class="inner">
+              <div class="bg"></div>
+              <h2>images2</h2>
+            </div>
+            <div class="direction">
+              <div class="header">bird2</div>
+              <div class="close"></div>
+            </div>
+          </li>
+          <li>
+            <div class="inner">
+              <div class="bg"></div>
+              <h2>images3</h2>
+            </div>
+            <div class="direction">
+              <div class="header">bird3</div>
+              <div class="close"></div>
+            </div>
+          </li>
+          <li>
+            <div class="inner">
+              <div class="bg"></div>
+              <h2>images4</h2>
+            </div>
+            <div class="direction">
+              <div class="header">bird4</div>
+              <div class="close"></div>
+            </div>
+          </li>
+          <li>
+            <div class="inner">
+              <div class="bg"></div>
+              <h2>images5</h2>
+            </div>
+            <div class="direction">
+              <div class="header">bird5</div>
+              <div class="close"></div>
+            </div>
+          </li>
+          <li>
+            <div class="inner">
+              <div class="bg"></div>
+              <h2>images6</h2>
+            </div>
+            <div class="direction">
+              <div class="header">bird6</div>
+              <div class="close"></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      $(".init").delay(200).removeClass("init");
+      $(".wrap li").click(function(){
+        $("ul").attr("id","activeWrap");
+        $(".active").removeClass("active");
+        $(this).addClass("active");
+      })
+      $(".close").click(function(e){
+        $("#activeWrap").removeAttr("id");
+        $("active").removeClass;
+        e.stopPropagation()
+      })
+    </script>
+  </body>
+</html>

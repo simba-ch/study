@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // 我写的---------------------------------------------------------------------------
+
+        /*       英雄打怪兽的小游戏
+      
+      英雄和怪兽都具有攻击力、防御力、生命值、暴击几率（暴击时伤害翻倍）
+      
+      攻击伤害 = 攻击力 - 防御力
+      
+      伤害最少为1.
+      
+      创建一个英雄和一个怪兽，让它们互相攻击，直到一方死亡，输出整个攻击过程。 */
+        /* 
+                function Hero() {
+                    return {
+                        aggressivity: 100,
+                        apophylaxis: 65,
+                        ph: 500,
+                        explode: 0.7
+                    }
+                }
+                function Monster() {
+                    return {
+                        aggressivity: 90,
+                        apophylaxis: 80,
+                        ph: 500,
+                        explode: 0.5
+                    }
+                }
+        
+        
+        
+                function game(hero, monster) {
+                    var hurt,
+                        count = 1;
+                    while (hero.ph > 0 && monster.ph > 0) {
+                        console.log('第' + count + '回合');
+                        console.log('英雄回合：');
+                        hurt = hero.aggressivity - monster.apophylaxis;
+                        if (Math.random() < hero.explode) hurt *= 2;
+                        if (hurt < 1) hurt = 1;
+                        monster.ph -= hurt;
+                        console.log('英雄的生命值：' + hero.ph);
+                        console.log('怪兽的生命值：' + monster.ph);
+                        console.log('怪兽回合：');
+                        hurt = monster.aggressivity - hero.apophylaxis;
+                        if (Math.random() < monster.explode) hurt *= 2;
+                        if (hurt < 1) hurt = 1;
+                        hero.ph -= hurt;
+                        console.log('英雄的生命值：' + hero.ph);
+                        console.log('怪兽的生命值：' + monster.ph);
+                        count++;
+                    }
+                    if (monster.ph > 0) {
+                        console.log('怪兽胜利' );
+                    }
+                    else {
+                        console.log('英雄胜利' );
+                    }
+        
+                }
+        
+        
+                var objHero = new Hero();
+                var objMonster = new Monster();
+                game(objHero, objMonster); */
+
+        // 我写的---------------------------------------------------
+
+
+        // 看过袁进视频改进的------------------------------------------------
+        /*       英雄打怪兽的小游戏
+      
+      英雄和怪兽都具有攻击力、防御力、生命值、暴击几率（暴击时伤害翻倍）
+      
+      攻击伤害 = 攻击力 - 防御力
+      
+      伤害最少为1.
+      
+      创建一个英雄和一个怪兽，让它们互相攻击，直到一方死亡，输出整个攻击过程。 */
+
+
+        function Obj(name, attack, defence, ph, critRate) {
+            this.name = name;
+            this.attack = attack;
+            this.defence = defence;
+            this.ph = ph;
+            this.critRate = critRate * 0.01;
+            this.print = function () {
+                return `${this.name}\t生命值：${this.ph}\t攻击力：${this.attack}\t防御力：${this.defence}\t暴击几率：${critRate}%`;
+            }
+            this.hit = function (adversary) {
+                var damage = this.attack - adversary.defence;
+                var isCrit = false;
+                if (Math.random() < this.critRate) {
+                    isCrit = true;
+                    damage *= 2;
+                }
+                damage < 1 ? damage = 1 : damage;
+                adversary.ph -= damage;
+                adversary.ph < 0 ? adversary.ph = 0 : adversary;
+                console.log(`${isCrit ? '【暴击！】' : ''} 【${this.name}】 攻击了 【${adversary.name}】 造成了 【${damage}】 点伤害 对方当前血量为 【${adversary.ph}】`)
+            }
+        }
+
+
+        var hero = new Obj('迪迦', 2000, 2000, 7000, 80);
+        var monster = new Obj('巴顿', 2500, 1500, 10000, 30);
+
+        console.log(`
+    ${hero.print()}
+
+    VS
+
+    ${monster.print()}
+        `)
+
+        while (true) {
+            hero.hit(monster);
+            if (monster.ph == 0) {
+                console.log(`
+===================================================================
+                    ${hero.name}赢了！！！`);
+                break;
+            }
+            monster.hit(hero);
+            if (hero.ph == 0) {
+                console.log(`
+===================================================================
+                    ${monster.name}赢了！！！`);
+                break;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

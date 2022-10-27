@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <meta name="referrer" content="no-referrer" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <style>
+      .wrapper {
+        border: 1px solid;
+        height: 300px;
+        width: 500px;
+        display: flex;
+        position: absolute;
+        left: calc(50% - 250px);
+        top: 100px;
+        flex-direction: column;
+        background-image: linear-gradient(180deg, #000,5px,rgb(197, 116, 40));
+        padding: 2px 2px 0;
+        overflow: hidden;
+        resize: both;
+        min-width: 390px;
+        min-height: 200px;
+      }
+      .wrapper div{
+          flex:0 0 auto;
+      }
+     
+      .top {
+        height: 30px;
+        width: 100%;
+        
+      }
+      .top .left{
+         float: left;
+         margin:5px;
+         color: white;
+      }
+      .top .right{
+        float: right;
+      }
+      .top .right div{
+          float: left;
+          padding: 0 10px;
+          margin:5px 10px;
+          color: white;
+      }
+      .top .right div:first-child{
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 10px;
+      }
+      .search { 
+        height: 26px;
+      }
+      .search input {
+        width: calc(100% - 4px);
+        height: 20px;
+        background-color: rgba(255, 255, 255, 0.7)
+      }
+      .wrapper .body{
+        display: flex;
+        margin-top: 5px;
+        flex: 1 1 auto;
+        justify-content: flex-start;
+      }
+      .body .left{
+          width:150px;
+          height: 100%;
+          margin-right: 20px;
+          flex: 0 0 auto;
+      }
+      .body .left img{
+          width: 100%;
+          height: 100%;
+      }
+      .body .right{
+          flex: 1 1 auto;
+          color:white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="top">
+          <div class="left">神马</div>
+          <div class="right">
+              <div>网页</div>
+              <div>小说</div>
+              <div>视频</div>
+              <div>更多</div>
+          </div>
+      </div>
+      <div class="search">
+        <input type="text" />
+      </div>
+      <div class="body">
+        <div class="left"><img src="https://bkimg.cdn.bcebos.com/pic/eaf81a4c510fd9f98eb187b12b2dd42a2934a440?x-bce-process=image/watermark,g_7,image_d2F0ZXIvYmFpa2UxNTA=,xp_5,yp_5" alt="刘德华" /></div>
+        <div class="right">
+            <h3>刘德华</h3>
+            <p>演员、歌手、香港“四大天王”之一</p>
+            <p>1961年09月27日（57岁）</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

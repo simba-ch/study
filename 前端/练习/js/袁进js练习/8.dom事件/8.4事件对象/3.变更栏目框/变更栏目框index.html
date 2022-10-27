@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 390px;
+            height: 655;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        .top {
+            height: 10%;
+            width: 100%;
+            border-bottom: 2px solid #ccc;
+        }
+
+        .content {
+            height: 90%;
+            width: 100%;
+        }
+
+        .top ul {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        li {
+            width: 25%;
+            height: 100%;
+            list-style: none;
+            text-align: center;
+            box-sizing: border-box;
+            padding-top: 35px;
+            font-size: 18px;
+            color: #2c7bbb;
+            cursor: pointer;
+        }
+
+        li:hover {
+            color: #d32228;
+        }
+
+        .current {
+            border-bottom: 4px solid #d32228;
+            color: #d32228;
+        }
+
+        img {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='container'>
+        <div class='top'>
+            <ul>
+                <li data-src='images/1.png' class="current">电玩</li>
+                <li data-src='images/2.png'>网游</li>
+                <li data-src='images/3.png'>手游</li>
+                <li data-src='images/4.png'>数码</li>
+            </ul>
+        </div>
+        <div id='content'>
+            <img src="images/1.png" width='390px' alt="">
+        </div>
+    </div>
+</body>
+
+<script sign = '袁进仿写'>
+    var ul = document.querySelector('.top ul'),
+        img = document.querySelector('#content img');
+    ul.onclick = function (e) {
+        if (e.target.dataset.src) {
+            document.querySelector('.top ul li.current').classList.remove('current');
+            e.target.classList.add('current');
+            img.src = e.target.dataset.src;
+        }
+    }
+</script>
+
+</html>

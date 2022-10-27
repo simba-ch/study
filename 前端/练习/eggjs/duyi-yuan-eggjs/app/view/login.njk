@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta
+    name="viewport" content="width=device-width, initial-scale=1.0"/>
+    {# <title>{{ title }}</title> #}
+    <title>登陆页</title>
+    <link rel="stykesheet" href="/public/css/reset.css">
+    <link rel="stylesheet" href="/public/css/login.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>登陆页面</h1>
+      <form action="" method="post">
+        <div class="form_row">
+          <label for="loginId">账号</label><input type="text" name="loginId" value="{{ loginId }}"/>
+        </div>
+        <div class="form_row">
+          <label>密码</label><input type="passworld" name="loginPwd">
+        </div>
+        <div class="form_row">
+          <label>验证码</label><input type="text" name="captcha">
+          <span data-captcha="{{ captcha }}" id="captcha"></span>
+        </div>
+        {% if err %}
+          <div class="err form_row">
+            {{ err }}
+          </div>
+        {% endif %}
+        <div class="form_row">
+          <button>登陆</button>
+        </div>
+      </form>
+    </div>
+    <script src="/public/js/rmErr.js"></script>
+    <script src="/public/js/addCaptcha.js"></script>
+  </body>
+</html>

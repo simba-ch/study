@@ -1,0 +1,27 @@
+.container {
+  margin: auto;
+  margin-top: 100px;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h1,
+form {
+  text-align: center;
+  margin: auto;
+  margin-top: 10px;
+}
+.form_row {
+  margin-top: 10px;
+  height: 50px;
+  line-height: 50px;
+}
+.form_row label {
+  margin-right: 4px;
+}
+.err{
+  /* font-size:1.5em; */
+  color:red
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 利息计算器
+        var principal = 200000,
+            interestRate = 0.04,
+            month = 12,
+            interest;
+        principal >= 100000 && (interestRate *= 1.2);
+    //    principal < 100000 && interestRate;
+        interest = principal * month / 12 * interestRate;
+        console.log(interest);
+
+
+
+
+        // 计算二月天数
+        var year = 1987,
+        days = ((year % 400 == 0  || (year % 4 == 0 && year % 100 != 0)) && 30) || ((year % 400 == 0  || (year % 4 == 0 && year % 100 != 0)) || 29);
+        console.log(days);
+        
+
+    </script>
+</body>
+
+</html>

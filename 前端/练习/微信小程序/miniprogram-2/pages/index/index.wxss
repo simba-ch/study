@@ -1,0 +1,43 @@
+.text{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.scroll-x-view {
+  height: 3000px;
+  width: 100%;
+  display: flex;
+  flex: 1;
+}
+.inner{
+  height: 100%;
+  width: 100%;
+}
+.scroll-x-view .scroll-view-item {
+  margin-top: 50rpx;
+  width: 750rpx;
+  height: 800rpx;
+  display:inline-block;
+}
+.bg_red {
+  background: lightpink;
+}
+.bg_blue {
+  background: lightblue;
+}
+.bg_green {
+  background: lightgreen;
+}
+.bg_yellow {
+  background: lightyellow;
+}
+.scroll-x-view1 {
+  width: 100%;
+  height: 100rpx;
+  white-space: nowrap;
+}
+.scroll-x-view1 .scroll-view-item1 {
+  width: 400rpx;
+  height: 100rpx;
+  display:inline-block;
+}

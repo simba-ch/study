@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>xinba</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+        .container {
+            width: 350px;
+            height: 350px;
+            margin: 100px;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+
+        .mouse {
+            position: relative;
+        }
+
+        .mouseBigSize {
+            width: 540px;
+            height: 540px;
+            position: absolute;
+            top: 0;
+            left: 370px;
+            border: 1px solid #ccc;
+            overflow: hidden;
+            display: none;
+        }
+
+        .mouseBigSize img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .mask {
+            width: 236px;
+            /*118*/
+            height: 236px;
+            background: rgba(200, 233, 14, 0.4);
+            cursor: move;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class='mouse'>
+            <img src='./images/mouse.jpg' alt="">
+            <div class='mask'></div>
+        </div>
+        <div class='mouseBigSize'>
+            <img src="./images/mouseBigSize.jpg" alt="">
+        </div>
+    </div>
+
+    <script>
+        var container = document.querySelector('.container'),
+            mouse = document.querySelector('.mouse'),
+            mask = document.querySelector('.mask'),
+            mouseBigSize = document.querySelector('.mouseBigSize');
+            mouseBigSizeImg = document.querySelector('.mouseBigSize img');
+        container.onmouseenter = function () {
+            mask.style.display = 'block';
+            mouseBigSize.style.display = 'block';
+        }
+        container.onmouseleave = function () {
+            mask.style.display = 'none';
+            mouseBigSize.style.display = 'none';
+        }
+        container.onmousemove = function (e) {
+            var leftNew,
+                topNew;
+            if (e.target.tagName === 'DIV') {
+                var maskStyle = getComputedStyle(mask);
+                leftNew = parseFloat(maskStyle.left) + e.offsetX - 118 + 'px';
+                topNew = parseFloat(maskStyle.top) + e.offsetY - 118 + 'px';
+            }
+            else {
+                leftNew = e.offsetX - 118 + 'px';
+                topNew = e.offsetY - 118 + 'px';
+            }
+            if (parseFloat(leftNew) < 0) leftNew = 0;
+            if (parseFloat(leftNew) > 114) leftNew = '114px';
+            if (parseFloat(topNew) < 0) topNew = 0;
+            if (parseFloat(topNew) > 114) topNew = '114px';
+            mask.style.left = leftNew;
+            mask.style.top = topNew;
+            mouseBigSizeImg.style.left = `-${parseFloat(leftNew)/(350/800)}px`;
+            mouseBigSizeImg.style.top = `-${parseFloat(topNew)/(350/800)}px`;
+        }
+
+
+    </script>
+</body>
+
+</html>

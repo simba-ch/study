@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../函数/common.js"></script>
+</head>
+
+<body>
+    <script>
+        /*      // 1. 找到某个字符串中出现最多的字符，打印字符和它出现的次数
+             function fnGetMoreFreqInString(str) {
+                 var len = str.length;
+                 var objRoom = {},
+                     objResult;
+                 for (var i = 0; i < len; i++) {
+                     if (objRoom[str[i]]) {
+                         objRoom[str[i]]++;
+                     }
+                     else {
+                         objRoom[str[i]] = 1;
+                     }
+                 }
+     
+                 for (var prop in objRoom) {
+                     if (!objResult || objResult.freq < objRoom[prop]) {
+     
+                         objResult = {
+                             attr: prop,
+                             freq: objRoom[prop]
+                         }
+     
+                     }
+                 }
+                 return objResult;
+             }
+     
+             var str = '162485233541dsagndsfjaokfjoksamgkbn'
+     
+             var result = fnGetMoreFreqInString(str);
+             console.log(result); */
+
+
+
+
+
+
+
+        /*  // 2. 将一个字符串中单词之间的空格去掉，然后把每个单词首字母转换成大写
+         // 比如："hello world"  ->  "HelloWorld"  大驼峰命名法
+         var str = 'hello world';
+         var strWords = str.split(' ');
+         var len = strWords.length;
+         var arr = [];
+         var arrNew = []
+         for (i = 0; i < len; i++) {
+             arr = strWords[i].split('');
+             var lenArr = arr.length;
+             for (var j = 0; j < lenArr; j++) {
+                 if (j == 0) {
+                     arrNew.push(arr[j].toUpperCase());
+                 }
+                 else{
+                     arrNew.push(arr[j]);
+                 }
+             }
+ 
+ 
+         }
+ 
+         console.log(arrNew.join('')); */
+
+
+
+
+        // 3. 书写一个函数，产生一个指定长度的随机字符串，字符串中只能包含大写字母、小写字母、数字
+        function random() {
+            var positiveInt = prompt("输入一个正整数：");
+            var temp = '';
+            for (var i = 65; i < 91; i++) {
+                temp += String.fromCharCode(i);
+            } 
+            for (var i = 48; i < 58; i++) {
+                temp += String.fromCharCode(i);
+            }
+            for (var i = 97; i < 123; i++) {
+                temp += String.fromCharCode(i);
+            }
+            var result = '';
+            for (i = 0; i < positiveInt; i++) {
+                result += temp[parseInt(fnGetRandom(0,63))]
+            }
+            console.log(result);
+        }
+        random();
+        
+
+        /*  // 4. 将字符串按照字符编码的顺序重新升序排序
+         // 如果是降序
+         function sort(character1, character2) {
+             return character1 > character2;
+         }
+         var str = 'sadjhgklfhgjklsdmkgb';
+         var arrStr = str.split('');
+         var len = arrStr.length;
+         for (var i = 1; i < len; i++) {
+             for (var j = 0; j < len - i; j++) {
+                 if (sort(arrStr[j], arrStr[j + 1])) {
+                     var temp = arrStr[j];
+                     arrStr[j] = arrStr[j + 1];
+                     arrStr[j + 1] = temp;
+ 
+                 }
+             }
+         }
+         var strNew = arrStr.join('');
+         console.log(strNew); */
+
+/* 
+        // 5. 从一个标准的身份证号中取出用户的出生年月日和性别，保存到对象
+        // 例如，"524713199703020014
+        // 得到对象：
+        // birthYear: 1997
+        // birthMonth: 3
+        // birthDay: 2
+        // gender: "男"  // 性别看倒数第二位，奇数为男，偶数为女 
+        var numID = "140203197811158601";
+        var obj = {
+            birthYear: numID.slice(6, 10) + '年',
+            birthMonth: parseInt(numID.slice(10, 12)) + '月',
+            birthDay: parseInt(numID.slice(12, 14)) + '号',
+            gender:+(numID.slice(-2,-1)) % 2 ? '男' : "女"
+        };
+
+        console.log(obj); */
+
+    </script>
+</body>
+
+</html>

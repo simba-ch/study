@@ -1,0 +1,17 @@
+/* line 3, ../sass/css3.scss */
+.rounded {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 7, ../sass/css3.scss */
+#opacity {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+}
+
+/* line 11, ../sass/css3.scss */
+h1 {
+  height: 10vh;
+}

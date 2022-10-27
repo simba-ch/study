@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+ul, li {
+    list-style: none;
+}
+
+body {
+    background: #fff;
+    color: #fff;
+}
+
+.calendar {
+    background: black;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.calendar header {
+    padding: 16px 30px;
+    border-bottom: #fff 1px solid;
+}
+
+.calendar h2 {
+    font-size: 60px;
+    font-weight: normal;
+}
+
+.calendar header p {
+    color: #87CEFF;
+}
+
+.calendar header p:hover {
+    color: #EEE9E9;
+}
+
+#lunar {
+    padding: 0 10px;
+}
+
+.content {
+    padding: 16px 30px;
+    font-size: 30px;
+    border-bottom: #fff 1px solid;
+    margin-bottom: 1px;
+    width: 490px;
+}
+
+.content>div {
+    line-height: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.iconfont {
+    font-size: 30px;
+}
+
+.icon-xiangshang {
+    margin-right: 40px;
+}
+
+.icon-xiangxia {
+    margin-right: 20px;
+}
+
+#dateList::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+#dateList li,#weekName li {
+    float: left;
+    width: 70px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    padding: 5px 0;
+}
+
+#dateList li span {
+    line-height: 20px;
+}
+
+#dateList li span:nth-of-type(1) {
+    font-size: 20px;
+}
+
+#dateList li span:nth-of-type(2) {
+    font-size: 10px;
+}
+.opacity-50{
+    opacity: 0.5;
+}
+.selected{
+    background: #1874CD;
+}
+#weekName{
+    display: flex;
+    justify-content: space-between;
+}

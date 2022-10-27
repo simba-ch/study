@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .item {
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        font-size: 30px;
+        background-color: #0ff;
+      }
+      #container {
+        display: flex;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: all 0.5s ease-in 0.2s;
+      }
+      #wrapper {
+        width: 400px;
+        height: 100px;
+        border: 1px solid black;
+        position: relative;
+        margin: 300px auto;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="container">
+        <div class="item" onclick="onChange(0)">1</div>
+        <div class="item" onclick="onChange(1)">2</div>
+        <div class="item" onclick="onChange(2)">3</div>
+        <div class="item" onclick="onChange(3)">4</div>
+        <div class="item" onclick="onChange(4)">5</div>
+        <div class="item" onclick="onChange(5)">6</div>
+      </div>
+    </div>
+  </body>
+  <script>
+    // 获取可视区元素
+    const view = document.getElementById("wrapper");
+    // 得到可视区的宽度,left值
+    const { width: viewWith, left: viewLeft } = view.getBoundingClientRect();
+
+    // 获取内容器元素
+    const container = document.getElementById("container");
+    // 得到内容器的宽度
+    const { width: containerWidth } = container.getBoundingClientRect();
+
+    // 计算出内容器的最大偏移量,这是一个负值
+    const offsetX = viewWith - containerWidth;
+    // 计算出可视区的中点位置
+    const viewCenter = viewLeft + viewWith / 2;
+
+    function onChange(i) {
+      // 得到当前内容器的left值
+      const curContainerLeft = parseFloat(getComputedStyle(container).left);
+      const curTargetInfo = event.target.getBoundingClientRect();
+
+      // 得到当前的点击元素
+      const curDom = event.target;
+
+      // 得到当前元素的中心位置
+      const { width: curDomWidth, left: curDomLeft } =
+        curDom.getBoundingClientRect();
+      const curDomCenter = curDomLeft + curDomWidth / 2;
+
+      // 得到当前目标中心位置与可视区中心位置的距离
+      // 正值当前元素在可视区中线的右边，反之亦然
+      const desc = curDomCenter - viewCenter;
+
+      // 定义一个实际需要移动到的位置
+      let realLeft;
+      if (desc < 0) {
+        curContainerLeft - desc > 0
+          ? (realLeft = 0)
+          : (realLeft = curContainerLeft - desc);
+      } else {
+        curContainerLeft - desc < offsetX
+          ? (realLeft = offsetX)
+          : (realLeft = curContainerLeft - desc);
+      }
+
+      // 将当前元素的left值设置为移动后的left值
+      container.style.left = realLeft + "px";
+    }
+  </script>
+  <script src="./test.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="./js/qrcode.js"></script>
+</html>

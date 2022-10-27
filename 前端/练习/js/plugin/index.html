@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .clock {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        left: calc(50% - 100px);
+        top: 200px;
+        background-color: black;
+        border-radius: 50%;
+        animation: run 10s linear both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clock"></div>
+    <script src="myPlugin.js"></script>
+    <script>
+       
+        let debounce = myPlugin.debounce(function(str,str1){
+          console.log(str+str1);
+        },1000)
+        window.onresize = function(){
+          debounce("惊不惊喜","hahaha");}
+      
+    </script>
+  </body>
+</html>

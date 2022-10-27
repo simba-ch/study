@@ -1,0 +1,26 @@
+
+<!-- start 标签区域 -->
+<view class="text" style="height:{{height}}px " >
+  <!-- scroll-into-view 可以跳转到绑定值对应的ID的标签区域 -->
+  <scroll-view class='scroll-x-view1' scroll-x='true' scroll-into-view='{{indexMaodian}}'>
+  <view bindtap="toDetail"  data-id="a1" class='scroll-view-item1 bg_red' id="a"  >1标签</view>
+  <view  bindtap="toDetail" data-id="b1" class='scroll-view-item1 bg_blue' id="b">2标签</view>
+  <view  bindtap="toDetail" data-id="c1" class='scroll-view-item1 bg_green' id="c">3标签</view>
+  <view  bindtap="toDetail" data-id="d1" class='scroll-view-item1 bg_yellow' id="d">4标签</view>
+  <view  bindtap="toDetail" data-id="e1" class='scroll-view-item1 bg_red' id="e">5标签</view>
+</scroll-view>
+<!-- end 标签区域 -->
+
+<!-- start 标签对应内容区域 -->
+<scroll-view class='scroll-x-view' scroll-y='true' bindscroll="onPageScroll" scroll-into-view='{{storeDetail}}'>
+<view class="inner">
+  <view class='scroll-view-item bg_red' id="a1">1标签对应内容区域</view>
+  <view class='scroll-view-item bg_blue' id="b1">2标签对应内容区域</view>
+  <view class='scroll-view-item bg_green' id="c1">3标签对应内容区域</view>
+  <view class='scroll-view-item bg_yellow' id="d1">4标签对应内容区域</view>
+  <view class='scroll-view-item bg_red' id="e1">5标签对应内容区域</view>
+</view>
+</scroll-view>
+<!-- end 标签对应内容区域 -->
+
+</view>

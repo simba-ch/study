@@ -1,0 +1,37 @@
+#main {
+  .seriousError {
+    font-size: 18px;
+      &:hover{
+        color:blue;
+        @extend #error;
+      }
+   
+  }
+}
+
+#error {
+  color: red;
+}
+
+a#error {
+  &:hover {
+    color: blue;
+  }
+}
+
+/*========华丽分割线=========*/
+
+#main .seriousError {
+  font-size: 18px;
+  @extend .error;
+}
+
+.error {
+  color: red;
+}
+
+a.error {
+  &:hover {
+    color: blue;
+  }
+}

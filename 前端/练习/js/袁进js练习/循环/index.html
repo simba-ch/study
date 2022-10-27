@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 
+            // 1. 在控制台中输出100个*
+            for (var i = 0; i < 100; i++) {
+                  document.write("* ");
+               }
+         */
+
+
+        /* 
+         // 2. 让用户输入*号的数量，然后输出对应数量的*
+        
+            var num = +window.prompt("请输入一个正整数");
+            if(isNaN(num)){console.log('输入错误');}
+            else{
+            for (var i = 0; i < num; i++) {
+            document.write('* ');
+           }
+        } */
+
+
+
+        /* 
+        // 3. 输出一个3行5列的*号
+        
+        for (var i = 0; i < 3; i++) {
+            for(var j = 0; j < 5; j++) {
+                document.write("*");
+            }
+            document.write('<br>');
+        }
+         */
+
+
+        /* //4. 用*号输出一个5行的直角三角形
+        
+        for(var i = 1; i <= 5; i++) {
+            for (var j = 0;j < i;j++) {
+                document.write("* ");
+            }
+            document.write('<br>');
+        }  */
+
+
+
+
+        /*    
+           //5. 用*号输出一个5行的等腰三角形
+           // 9 -> 5 --> 1
+           // 9 -> 4 --> 3
+           // 9 -> 3 --> 5
+           // 9 -> 2 --> 7
+           // 9 -> 1 --> 9
+           
+               var j = 1;
+               for (var i = 1; i <= 5; i++) {
+                   for (var n = 1; n <= 9; n++) {
+                   if (n > (9 - j)/2 && n <= ((9-j)/2 + j)) {
+                    document.write('*');
+                   }
+                   else{
+                       document.write('&nbsp');
+                   }
+                   }
+                   j += 2;
+                   document.write("<br>");
+               }
+                */
+
+
+        /*
+        // 6. 输出1-100的所有数字
+        for (var i = 1; i <= 100; i++) {
+            document.write(i + " ");
+        }
+        */
+
+
+        /* 
+        // 7. 输出1-100的所有奇数
+        for (var i = 1; i < 100; i += 2) {
+            document.write(i + "              ");
+        }
+         */
+
+
+        /* 
+        //  8. 求1-100之间所有数字之和
+        var sum = 0;
+        for (var i = 1; i <= 100; i++) {
+            sum += i;
+        }
+        console.log(sum);//5050
+         */
+
+
+        /* 
+        //  9. 求1-100之间所有奇数之和
+        var oddSum = 0; 
+        for (var i = 1; i < 100; i += 2) {
+            oddSum += i;
+        }
+        console.log(oddSum);//2500
+         */
+
+        /* 
+        //  10. 求1-10之间所有数字的积
+        var product = 1; 
+        for (var i = 1; i <= 10; i++) {
+            product *= i;
+        }
+        console.log(product); */
+
+
+        /* 
+                // 11. 判断数字233是不是素数。
+                var num = 97;
+                var result = true;
+               
+                for (var i = 2; i < num; i++) {
+                    if (num % i == 0) {
+                       result = false;
+                    
+                       break;
+                    }
+                }
+                console.log(result);
+ */
+
+
+
+        // 12. 输出1-100中的所有素数
+
+        /*         for (var i = 2; i <= 100; i++) {
+                    var result = true;
+                    for (var j = 2; j < i; j++) {
+                        if (i % j == 0) {
+                            result = false;
+                            break;
+                        }
+                    }
+                    if (result) {
+                        console.log(i);
+                    }
+                }
+         */
+
+        /* 
+        //  13. 求1-100之间的所有素数之和
+        var sum = 0;
+        for (var i = 2; i <= 100; i++){
+            var isPrime = true;
+            for (var j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime) {
+                sum += i;
+            }
+        }
+        console.log(sum);//1060
+         */
+
+        /* 
+        
+                        // 14. 输出99乘法表，效果如下：
+                        //  `
+                        // 1*1=1	
+                        // 1*2=2	2*2=4	
+                        // 1*3=3	2*3=6	3*3=9	
+                        // 1*4=4	2*4=8	3*4=12	4*4=16	
+                        // 1*5=5	2*5=10	3*5=15	4*5=20	5*5=25	
+                        // 1*6=6	2*6=12	3*6=18	4*6=24	5*6=30	6*6=36	
+                        // 1*7=7	2*7=14	3*7=21	4*7=28	5*7=35	6*7=42	7*7=49	
+                        // 1*8=8	2*8=16	3*8=24	4*8=32	5*8=40	6*8=48	7*8=56	8*8=64	
+                        // 1*9=9	2*9=18	3*9=27	4*9=36	5*9=45	6*9=54	7*9=63	8*9=72	9*9=81` 
+                
+                        for (var row = 1; row <= 9; row++) {
+                
+                            for (var col = 1; col <= row; col++) {
+                                document.write(`${col} * ${row} = ${col * row}\t\t\t\t\t\t\t`);
+                            }
+                            document.write("<br>");
+                        }
+                
+                 */
+
+
+
+
+
+        /*         //   15. 将猜拳游戏升级，记录系统和玩家的积分，获胜者加1分，平局和输者不计分
+        
+                var player = 0, computer = 0;
+        
+                do {
+                    var fist = window.prompt("请您输入“石头”、“剪刀”、“布”");
+                    var pcFist = Math.random();
+                    switch (pcFist) {
+                        case pcFist <= 0.3333:
+                            pcFist = "石头";
+                            break;
+                        case pcFist <= 0.66666:
+                            pcFist = "剪刀";
+                            break;
+                        default:
+                            pcFist = "布";
+                    }
+                    if (fist == "石头" || fist == "剪刀" || fist == "布") {
+                        console.log(`您输入了${fist},电脑输入了${pcFist}:`);
+                        if (fist == "剪刀" && pcFist == "布" || fist == "布" && pcFist == "石头" || fist == "石头" && pcFist == "剪刀") {
+                            console.log("玩家赢！");
+                            player++;
+                        }
+                        else if (fist == pcFist) {
+                            console.log("平局");
+                        } else {
+                            console.log('电脑赢');
+                            computer++;
+                        }
+                    }
+        
+                    else if (fist != "石头" || fist != "剪刀" || fist != "布" || fist != "null"){
+                        console.log("输入有误！");
+                        break;
+                    }
+                } while (fist);
+        
+                if (fist == null) {
+                    console.log("您取消输入游戏结束！");
+                    console.log(`您的得分为${player},电脑得分为${computer}`);
+                } */
+
+
+
+        // 15. 将猜拳游戏升级，记录系统和玩家的积分，获胜者加1分，平局和输者不计分（优化趋于袁进）
+        //定义变量
+        var pcScore = 0,
+            playerScore = 0,
+            num = 1,
+            continuance = true;
+        while (continuance) {
+
+            var playerFist = window.prompt('请出拳（石头、剪刀、布）'),
+                pcFist = Math.random();
+            if (pcFist < 0.3333) {
+                pcFist = '石头';
+            }
+            else if (pcFist < 0.6666) {
+                pcFist = '剪刀';
+            }
+            else {
+                pcFist = '布';
+            }
+            //判断是否结束游戏
+            if (playerFist == null) {
+                console.log(`游戏结束
+                系统：${pcScore}分，玩家：${playerScore}分`);
+                continuance = false;
+                break;
+            }
+            //循环出拳
+            console.log(`==============第${num}轮==============`);
+            if (playerFist != '石头' && playerFist != '剪刀' && playerFist != '布') {
+                console.log('输入错误，请重新输入');
+                continue;
+            }
+            else {
+                console.log(`电脑输入了${pcFist}，玩家输入了${playerFist}`);
+                if (pcFist == playerFist) {
+                    console.log('平局！！！');
+                }
+                else if (pcFist == '石头' && playerFist == '布' || pcFist == '剪刀' && playerFist == '石头' || pcFist == '布' && playerFist == '剪刀') {
+                    console.log('你赢了！！！');
+                    playerScore++;
+                }
+                else {
+                    console.log('你输了！！！');
+                    pcScore++;
+                }
+                console.log(`系统：${pcScore}分，玩家：${playerScore}分`);
+                num++;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

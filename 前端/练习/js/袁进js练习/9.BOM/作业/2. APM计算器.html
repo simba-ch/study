@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        p {
+            font-size: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        倒计时：<span class="spanclock">5</span>
+    </p>
+    <p>
+        点击数：<span class="spannum">0</span>
+    </p>
+    <p>
+        <button id='btnadd'>点击</button>
+        <button class="btnreset">重置</button>
+    </p>
+
+
+    <script>
+        var time = document.querySelector('p span.spanclock'),
+            clickText = document.querySelector('p span.spannum'),
+            clickBtn = document.getElementById('btnadd'),
+            resetBtn = document.getElementsByClassName('btnreset')[0],
+            initTime = time.innerText, decrementTime = initTime,
+            clickNum = 0;
+        var timer;
+        clickBtn.onclick = count;
+
+        resetBtn.onclick = function () {
+            clickNum = 0;
+            clickText.innerHTML = clickNum;
+            time.innerText = initTime;
+            decrementTime = initTime;
+            clearTimeout(timer);
+            timer = null;
+            clickBtn.onclick = count;
+        }
+
+        function interval(callback, duration) {
+            if (decrementTime === 0) {
+                clickBtn.onclick = null;
+                clearTimeout(timer);
+            } else {
+                timer = setTimeout(function () {
+                    callback();
+                    interval(callback, duration);
+                }, duration)
+            }
+        }
+
+        function decrement() {
+            decrementTime--;
+            time.innerText = decrementTime;
+        }
+
+        function count() {
+            if (!timer) interval(decrement, 1000);
+            clickNum++;
+            clickText.innerHTML = clickNum;
+        }
+
+    </script>
+</body>
+
+</html>

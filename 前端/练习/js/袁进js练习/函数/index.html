@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="common.js"></script>
+</head>
+
+<body>
+
+    <script>
+        /* 1. 利用上面的某些函数，实现哥德巴赫猜想
+        
+        任一大于2的偶数都可写成两个质数之和，比如：8 = 3 + 5
+        
+        让用户输入一个大于2的整数，输出其等于哪两个素数相加  */
+
+        var userImport = +window.prompt('请输入一个大于2的偶数');
+        if (userImport > 2 && userImport % 2 === 0) {
+            var num1;
+            for (var i = 2; i < userImport - 1; i++) {
+                num1 = userImport - i;
+                if (fnIsPrime(num1) && fnIsPrime(i)) {
+                    console.log(`${userImport} = ${num1} + ${i}`);
+                }
+            }
+        }
+
+
+        /*   // 2. 让用户输入一个年份，输出该年每个月的天数
+          var userImport = +window.prompt('输入一个年份');
+          for (var i = 1; i <= 12; i++) {
+              console.log(`${i}月有：${fnGetDays(userImport, i)}天`);
+  
+          } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

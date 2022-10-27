@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./font/iconfont.css">
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="calendar">
+      <header>
+        <h2 id="time"></h2>
+        <p>
+          <span id="date"></span><span id="lunar"></span
+          ><span id="festival"></span>
+        </p>
+      </header>
+      <div class="content">
+        <div>
+          <span id="year" class="year"></span>
+          <div>
+            <span class="iconfont icon-xiangshang"></span><span class="iconfont icon-xiangxia"></span>
+          </div>
+        </div>
+        <ul id="weekName"></ul>
+        <ul id="dateList"></ul>
+      </div>
+    </div>
+
+    <script src="./moment-with-locales.min.js"></script>
+    <script src="./index.js" type="module"></script>
+  </body>
+</html>
